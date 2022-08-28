@@ -6,4 +6,6 @@ app.get('/', (req, res) => {
   res.json({'name': 'taro'});
 });
 
-app.listen(process.env.PORT || 8080);
+app.listen(process.env.PORT || 8080, function() {
+  console.log('[Application] Application listening at port ' + process.env.PORT);
+});
