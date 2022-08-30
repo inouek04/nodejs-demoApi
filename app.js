@@ -24,6 +24,8 @@ var db = () => {
   })
 }
 
+db();
+
 app.get('/', (req, res) => {
   log.log('[Application] from '  + req.ip + ' to /');
   res.json({'name': 'taro'});
