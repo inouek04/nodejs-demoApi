@@ -19,7 +19,7 @@ var client = new Client({
 var db = () => {
   client.connect()
   client.query('SELECT NOW()', (err, res) => {
-    log.log('[Application] Now ' + res);
+    log.log(res);
     client.end;
   })
 }
