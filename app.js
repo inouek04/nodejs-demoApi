@@ -20,7 +20,7 @@ var db = () => {
   client.connect()
   client.query('SELECT NOW()', (err, res) => {
     var reString = JSON.stringify(res);
-    log.log('[Application] deployed at ' + reString.rows.now);
+    log.log('[Application] deployed at ' + reString.rows);
     client.end;
   })
 }
