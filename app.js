@@ -19,7 +19,8 @@ var client = new Client({
 var db = () => {
   client.connect()
   client.query('SELECT NOW()', (err, res) => {
-    log.log(res);
+    var reString = JSON.stringify(res);
+    log.log('[Application] deployed at ' + reString);
     client.end;
   })
 }
